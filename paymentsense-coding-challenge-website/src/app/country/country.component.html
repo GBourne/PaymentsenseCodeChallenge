@@ -1,0 +1,32 @@
+<div class="country-edit" fxFlex fxLayout fxLayoutAlign="center">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="country.name" name="name"
+        [class.field-error]="form.submitted && name.invalid" required #name="ngModel" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Code" [(ngModel)]="country.alpha3Code" name="code"
+        [class.field-error]="form.submitted && code.invalid" required #code="ngModel" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Capital" [(ngModel)]="country.capital" name="capital"
+        [class.field-error]="form.submitted && capital.invalid" required #capital="ngModel" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Region" [(ngModel)]="country.region" name="region"
+        [class.field-error]="form.submitted && region.invalid" required #region="ngModel" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Flag" [(ngModel)]="country.flag" name="flag" flag="ngModel" />
+    </mat-form-field>
+    <div class="command-buttons">
+      <button type="submit" mat-raised-button color="primary" >
+        Add
+      </button>
+      <button type="button" mat-raised-button  (click)="form.resetForm()">
+        Clear
+      </button>
+
+  </div>
+  </form>
+</div>

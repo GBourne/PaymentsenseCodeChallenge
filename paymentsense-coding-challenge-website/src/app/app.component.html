@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <img width="50%" alt="Paymentsense Logo" src="../assets/paymentsense-logo.svg">
+  <h1>
+    {{ title }}
+  </h1>
+  <h2>... Paymentsense Coding Challenge API is <fa-icon [icon]=paymentsenseCodingChallengeApiActiveIcon
+      [styles]="{ 'stroke': paymentsenseCodingChallengeApiActiveIconColour, 'color': paymentsenseCodingChallengeApiActiveIconColour }">
+    </fa-icon> ...</h2>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="layout-wrapper">
+  <div fxFlex="80%" fxFlex.lt-md="100%" class="flex-wrapper">
+    <mat-sidenav-container>
+      <mat-sidenav #sideNav role="navigation">
+          <app-side-nav (sideNavClose)="sideNav.close()" ></app-side-nav>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <app-toolbar-nav (sideNavToggle)="sideNav.toggle()"></app-toolbar-nav>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+
+

@@ -1,0 +1,25 @@
+<div>
+  <mat-toolbar color="primary">
+    <div fxFlex fxLayout fxLayoutAlign="end">
+      <button mat-icon-button (click)="onSideNavClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+  <mat-list>
+    <mat-list-item>
+      <div fxFlex fxLayout fxLayoutAlign="center">
+        <mat-form-field>
+          <input matInput placeholder="Search" [(ngModel)]="searchVal">
+        </mat-form-field>
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <div fxFlex fxLayout fxLayoutAlign="center">
+        <button mat-raised-button color="primary" [routerLink]="['/countries']" [queryParams]="{search:searchVal}" (click)="onSideNavClose()">
+          Search
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>
